@@ -1,9 +1,17 @@
-.before {
-  height: 500px;
-  width: 500px;
+.porch {
+  margin: 10px;
+  display: flex;
+  height: 250px;
+  width: 250px;
+  justify-content: space-between;
+  align-content: center;
 }
 
-.after {
-  height: 500px;
-  width: 500px;
+.window1 {
+  margin: 10px;
+  display: flex;
+  height: 250px;
+  width: 300px;
+  justify-content: space-between;
+  align-content: center;
 }
