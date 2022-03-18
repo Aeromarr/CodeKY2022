@@ -1,17 +1,18 @@
-.porch {
-  margin: 10px;
-  display: flex;
-  height: 250px;
-  width: 250px;
-  justify-content: space-between;
-  align-content: center;
+img {
+  height: auto;
+  width: 37%;
 }
 
-.window1 {
-  margin: 10px;
+.flex {
   display: flex;
-  height: 250px;
-  width: 300px;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
-  align-content: center;
+  max-width: 50%;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.flex > img {
+  flex: 1;
 }
