@@ -1,3 +1,9 @@
+h1 {
+  color: #fff;
+}
+body {
+  background-color: pink;
+}
 img {
   height: auto;
   width: 37%;
@@ -15,4 +21,60 @@ img {
 
 .flex > img {
   flex: 1;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.nav-ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav-ul a {
+  display: inline-block;
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.hamburger {
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 20px;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1024px) {
 }
