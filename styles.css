@@ -4,6 +4,9 @@
   --dark: #212121;
   --flexgap: 10px;
 }
+body {
+  background-color: var(--dark);
+}
 
 * {
   margin: 0;
@@ -50,6 +53,7 @@ section > h1 {
 
 p {
   font-weight: bold;
+  color: var(--light);
 }
 
 .project_stage {
@@ -131,6 +135,18 @@ p {
   transition: 0.4s;
 }
 
+.nav-links {
+  display: ;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--light);
+}
+
+.hamburger.is-active.nav-links {
+  display: none;
+  flex-direction: column;
+}
+
 .hamburger:hover span:nth-child(2) {
   transform: translateX(10px);
   background-color: var(--primary);
@@ -161,7 +177,7 @@ p {
 }
 
 .menu a {
-  color: #fff;
+  color: var(--light);
   margin: 0 16px;
   font-weight: 600;
   text-decoration: none;
@@ -181,6 +197,13 @@ p {
   }
   .menu {
     display: flex;
+  }
+  .menu a {
+    color: var(--light);
+  }
+  .hamburger.is-active span.links a {
+    color: var(--light);
+    display: block;
   }
 }
 
