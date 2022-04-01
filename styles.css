@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: var(--dark);
+  background: var(--dark);
 }
 
 * {
@@ -197,52 +197,69 @@ p {
   background-color: var(--primary);
 }
 
-.contactForm {
+.formContainer {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 5rem;
+  flex-direction: column;
 }
 
-form {
-  background: var(--light);
+#form {
+  width: 300px;
+  margin: 20vh auto 0 auto;
+  padding: 20px;
+  background-color: var(--light);
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+#form h1 {
+  color: var(--dark);
+  text-align: center;
+}
+
+#form button {
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  color: var(--light);
+  background-color: #8c38ff;
+  border: none;
+  border-radius: 4px;
+}
+
+.input-control {
   display: flex;
   flex-direction: column;
-  padding: 2rem 4rem;
-  width: 90%;
-  max-width: 600px;
-  border-radius: 10px;
 }
 
-form h4 {
-  color: var(--dark);
-  font-weight: 800;
-  margin-bottom: 20px;
+.input-control input {
+  border: 2px solid var(--light);
+  border-radius: 4px;
+  display: block;
+  font-size: 12px;
+  padding: 10px;
+  width: 100%;
 }
 
-form input,
-form textarea {
-  border: 0;
-  margin: 10px 0;
-  padding: 20px;
-  outline: none;
-  background: var(--light);
-  font-size: 16px;
+.input-control input:focus {
+  outline: 0;
 }
 
-form button {
-  padding: 15px;
-  background: var(--primary);
-  color: #fff;
-  font-size: 18px;
-  border: 0;
-  outline: none;
-  cursor: pointer;
-  width: 150px;
-  margin: 20px auto 0;
-  border-radius: 30px;
+.input-control.success input {
+  border-color: #09c372;
+}
+
+.input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control .error {
+  color: #ff3860;
+  font-size: 9px;
+  height: 13px;
 }
 
 @media (min-width: 768px) {
