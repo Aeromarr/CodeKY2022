@@ -7,6 +7,7 @@ hamburger.addEventListener("click", function () {
 });
 
 const form = document.getElementById("form");
+const email = document.getElementById("email");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -15,7 +16,7 @@ form.addEventListener("submit", (e) => {
 });
 
 const setError = (element, message) => {
-  const inputControl = elemnt.parentElement;
+  const inputControl = element.parentElement;
   const errorDisplay = inputControl.querySelector(".error");
 
   errorDisplay.innerText = message;
@@ -31,15 +32,8 @@ const setSuccess = (element) => {
   inputControl.classList.add("success");
   inputControl.classList.remove("error");
 };
-
 const validateInputs = () => {
   const emailValue = email.value.trim();
-
-  if (Name === "") {
-    setError(Name, "Name is required");
-  } else {
-    setSuccess(Name);
-  }
 
   if (emailValue === "") {
     setError(email, "Email is required");
